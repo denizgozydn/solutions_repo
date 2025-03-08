@@ -35,6 +35,7 @@ $$
 t = \frac{2 v_0 \sin(\theta)}{g}
 $$
 This is the time of flight.
+![alt text](image.png)
 
 #### Range Equation
 Substitute the time of flight into the horizontal equation:
@@ -46,7 +47,7 @@ $$
 R = \frac{v_0^2 \sin(2\theta)}{g}
 $$
 This is the range as a function of the angle of projection. Different initial conditions ($ v_0 $, $ g $) yield a family of solutions, scaling the range accordingly.
-
+<video controls src="projectile_colored.mp4" title="Title"></video>
 ---
 
 ### 2. Analysis of the Range
@@ -61,7 +62,7 @@ This is the range as a function of the angle of projection. Different initial co
 - *Gravitational Acceleration ($ g $)*: $ R \propto 1/g \, so a smaller $ g $ (e.g., on the Moon) increases the range.
 
 ---
-
+![alt text](image-1.png)
 ### 3. Practical Applications
 
 This model assumes a flat surface and no air resistance, but it can be adapted:
@@ -103,3 +104,4 @@ plt.ylabel('Range (meters)')
 plt.grid(True)
 plt.legend()
 plt.show()
+
