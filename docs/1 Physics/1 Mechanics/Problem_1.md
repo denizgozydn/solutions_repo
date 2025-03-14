@@ -71,7 +71,7 @@ This model assumes a flat surface and no air resistance, but it can be adapted:
 - *Real-World Examples*: Artillery, sports (e.g., golf, soccer), or space launches (with modified $ g $).
 
 ---
-
+.
 import numpy as np
 import matplotlib.pyplot as plt
 
