@@ -48,7 +48,7 @@ Where:
 
 4. **Analyze Interference Patterns**: Examine the resulting displacement \( D(x, y, t) \) as a function of position \( (x, y) \) and time \( t \). Identify regions of constructive interference (wave amplification) and destructive interference (wave cancellation).
 5. **Visualization**: Present your findings graphically, illustrating the interference patterns for the chosen regular polygon.
-
+![alt text](image.png)
 ### Considerations
 
 - Assume all sources emit waves with the same amplitude \( A \), wavelength \( \lambda \), and frequency \( f \).
