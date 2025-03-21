@@ -72,7 +72,7 @@ Resonance occurs when the driving frequency \(\omega\) approaches the natural fr
 
 ### Transition to Chaos
 For large \(F\) or specific \(\omega\), the nonlinear term \(\sin(\theta)\) dominates, leading to chaotic motion. This transition is evident in phase portraits and Poincaré sections, where trajectories shift from closed loops (periodic) to scattered points (chaotic).
-
+![alt text](image-2.png)
 ---
 
 ##  Practical Applications
