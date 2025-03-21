@@ -172,6 +172,95 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="interference-patterns-on-a-water-surface">Interference Patterns on a Water Surface</h1>
+<h2 id="motivation">Motivation</h2>
+<p>Interference occurs when waves from different sources overlap, creating new patterns. On a water surface, this can be easily observed when ripples from different points meet, forming distinctive interference patterns. These patterns can show how waves combine in different ways, either reinforcing each other (constructive interference) or canceling out (destructive interference).</p>
+<p>Studying these patterns helps us understand wave behavior in a simple, visual way. It also allows us to explore important concepts, such as the relationship between wave phase and the effects of multiple sources. This task provides a hands-on approach to learning about wave interactions and their real-world applications, offering an engaging way to dive into wave physics.</p>
+<h2 id="task">Task</h2>
+<p>We will analyze the interference patterns formed on the water surface due to the superposition of waves emitted from point sources placed at the vertices of a chosen regular polygon.</p>
+<h3 id="steps-to-follow">Steps to Follow</h3>
+<ol>
+<li><strong>Select a Regular Polygon</strong>: Choose a regular polygon (e.g., equilateral triangle, square, regular pentagon).</li>
+<li><strong>Position the Sources</strong>: Place point wave sources at the vertices of the selected polygon.</li>
+<li><strong>Wave Equations</strong>: Write the equations describing the waves emitted from each source, considering their respective positions.</li>
+</ol>
+<h4 id="31-wave-equation-from-a-single-source">3.1 Wave Equation from a Single Source</h4>
+<p>A wave emitted from a single point source on the water surface can be described by the following equation:</p>
+<div class="arithmatex">\[
+\text{Displacement at point } (x, y, t) = A \cdot \cos(k \cdot r - \omega t + \phi)
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( A \)</span> is the amplitude of the wave,
+- <span class="arithmatex">\( k \)</span> is the wave number, related to the wavelength <span class="arithmatex">\( \lambda \)</span> as: <span class="arithmatex">\( k = \frac{2\pi}{\lambda} \)</span>,
+- <span class="arithmatex">\( \omega \)</span> is the angular frequency, related to the frequency <span class="arithmatex">\( f \)</span> as: <span class="arithmatex">\( \omega = 2\pi f \)</span>,
+- <span class="arithmatex">\( r \)</span> is the distance from the source to the point <span class="arithmatex">\( (x, y) \)</span>,
+- <span class="arithmatex">\( t \)</span> is the time,
+- <span class="arithmatex">\( \phi \)</span> is the initial phase of the wave.</p>
+<h4 id="32-superposition-of-waves">3.2 Superposition of Waves</h4>
+<p>When there are multiple sources, the resulting displacement at each point on the water surface is the sum of the displacements from each source. This is known as the principle of superposition:</p>
+<div class="arithmatex">\[
+\text{Displacement at point } (x, y, t) = \sum_{i=1}^{n} A \cdot \cos(k \cdot r_i - \omega t + \phi_i)
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( n \)</span> is the number of sources (vertices of the polygon),
+- <span class="arithmatex">\( r_i \)</span> is the distance from the source <span class="arithmatex">\( i \)</span> to the point <span class="arithmatex">\( (x, y) \)</span>,
+- <span class="arithmatex">\( \phi_i \)</span> is the initial phase of the wave emitted from source <span class="arithmatex">\( i \)</span>.</p>
+<ol>
+<li><strong>Analyze Interference Patterns</strong>: Examine the resulting displacement <span class="arithmatex">\( D(x, y, t) \)</span> as a function of position <span class="arithmatex">\( (x, y) \)</span> and time <span class="arithmatex">\( t \)</span>. Identify regions of constructive interference (wave amplification) and destructive interference (wave cancellation).</li>
+<li><strong>Visualization</strong>: Present your findings graphically, illustrating the interference patterns for the chosen regular polygon.</li>
+</ol>
+<h3 id="considerations">Considerations</h3>
+<ul>
+<li>Assume all sources emit waves with the same amplitude <span class="arithmatex">\( A \)</span>, wavelength <span class="arithmatex">\( \lambda \)</span>, and frequency <span class="arithmatex">\( f \)</span>.</li>
+<li>The waves are coherent, maintaining a constant phase difference.</li>
+<li>Use Python libraries such as Matplotlib for visualization and simulation.</li>
+</ul>
+<h2 id="python-code-for-simulation-and-visualization">Python Code for Simulation and Visualization</h2>
+<p>The following Python code simulates the interference patterns of waves from point sources placed at the vertices of a regular polygon. We will use the following libraries: NumPy for numerical calculations and Matplotlib for visualization.</p>
+<p>```python
+import numpy as np
+import matplotlib.pyplot as plt</p>
+<h1 id="constants">Constants</h1>
+<p>A = 1            # Amplitude of the waves
+lambda_wave = 1  # Wavelength (m)
+f = 1            # Frequency (Hz)
+omega = 2 * np.pi * f  # Angular frequency
+k = 2 * np.pi / lambda_wave  # Wave number</p>
+<h1 id="parameters-for-the-regular-polygon">Parameters for the regular polygon</h1>
+<p>n_sides = 5        # Number of sides (vertices) of the polygon (e.g., pentagon)
+radius = 5         # Radius of the polygon (distance from center to vertices)
+theta_offset = 0   # Offset for the initial phase</p>
+<h1 id="generate-the-positions-of-the-sources-vertices-of-the-polygon">Generate the positions of the sources (vertices of the polygon)</h1>
+<p>angles = np.linspace(0, 2 * np.pi, n_sides, endpoint=False)
+sources = np.array([radius * np.cos(angles), radius * np.sin(angles)]).T</p>
+<h1 id="generate-the-grid-for-the-water-surface">Generate the grid for the water surface</h1>
+<p>x_grid, y_grid = np.meshgrid(np.linspace(-8, 8, 400), np.linspace(-8, 8, 400))
+grid_shape = x_grid.shape</p>
+<h1 id="calculate-the-displacement-at-each-point-on-the-grid-due-to-the-superposition-of-waves">Calculate the displacement at each point on the grid due to the superposition of waves</h1>
+<p>def calculate_displacement(x, y, t):
+    displacement = np.zeros_like(x)
+    for i in range(n_sides):
+        source = sources[i]
+        # Calculate distance from the source to each point on the grid
+        r = np.sqrt((x - source[0])<strong>2 + (y - source[1])</strong>2)
+        # Calculate the wave contribution from this source
+        displacement += A * np.cos(k * r - omega * t + theta_offset)  # Superposition of waves
+    return displacement</p>
+<h1 id="simulate-and-plot-the-interference-pattern-at-a-specific-time">Simulate and plot the interference pattern at a specific time</h1>
+<p>time = 0  # Set the time at which we want to visualize the pattern
+displacement = calculate_displacement(x_grid, y_grid, time)</p>
+<h1 id="plot-the-interference-pattern">Plot the interference pattern</h1>
+<p>plt.figure(figsize=(8, 8))
+plt.contourf(x_grid, y_grid, displacement, 50, cmap='RdBu')
+plt.colorbar(label='Displacement')
+plt.scatter(sources[:, 0], sources[:, 1], color='black', label='Sources', zorder=5)
+plt.title(f'Interference Pattern for a Regular {n_sides}-gon')
+plt.xlabel('X (m)')
+plt.ylabel('Y (m)')
+plt.legend()
+plt.axis('equal')
+plt.show()
+.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
