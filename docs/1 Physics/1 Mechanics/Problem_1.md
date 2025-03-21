@@ -54,13 +54,13 @@ This is the range as a function of the angle of projection. Different initial co
 
 The range $R $depends on $ \theta$ through $ \sin(2\theta) $:
 
-- $R $is maximized when$ \sin(2\theta) = 1 $, i.e., $ 2\theta = 90^\circ $, so $ \theta = 45^\circ $.
-- $R = 0 $when $ \sin(2\theta) = 0 $, i.e., $ \theta = 0^\circ$ or $ \theta = 90^\circ $.
-- The relationship is symmetric about $ 45^\circ $ (e.g., $ \theta = 30^\circ$ and$ 60^\circ$ give the same range).
+-  R $is maximized when$ \sin(2\theta) = 1$, i.e., $ 2\theta = 90^\circ $, so $\theta = 45^\circ$.
+-  R = 0 $when $ \sin(2\theta) = 0$, i.e., $ \theta = 0^\circ$ or $\theta = 90^\circ$.
+- The relationship is symmetric about $45^\circ$ (e.g., $\theta = 30^\circ$ and $60^\circ$ give the same range).
 
 **Influence of Other Parameters:**
 
-- **Initial Velocity$ v_0 $:** $ R \propto v_0^2 $, so doubling $ v_0 $ quadruples the range.
+- **Initial Velocity$ v_0 $:** $R \propto v_0^2$, so doubling $v_0$ quadruples the range.
 - **Gravitational Acceleration$ g $:** $ R \propto \frac{1}{g} $, so a smaller$ g $(e.g., on the Moon) increases the range.
 
 ---
