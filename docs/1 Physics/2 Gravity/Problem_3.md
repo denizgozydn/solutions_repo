@@ -9,7 +9,7 @@ The object can follow different types of trajectories based on its initial veloc
 - **Parabolic**: When the object follows a path that eventually returns to Earth.
 - **Elliptical**: When the object follows an elliptical orbit around Earth.
 - **Hyperbolic**: When the object escapes Earth's gravitational influence.
-
+![alt text](image-3.png)
 This document will:
 1. Derive the equations of motion governing the object’s trajectory.
 2. Perform a numerical simulation to compute the payload's path based on given initial conditions.
