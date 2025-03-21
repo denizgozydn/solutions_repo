@@ -14,7 +14,7 @@ In this document, we will:
 ## Kepler’s Third Law Derivation
 
 Kepler’s Third Law for circular orbits can be derived using Newton’s Law of Universal Gravitation. The gravitational force between two masses $M$ (the central body) and $m$ (the orbiting body) provides the centripetal force required for circular motion.
-
+![alt text](image-1.png)
 ### Step 1: Gravitational Force
 The gravitational force between two objects is given by:
 
@@ -39,7 +39,7 @@ Where $v$ is the orbital velocity.
 
 ### Step 3: Orbital Velocity and Period
 The orbital velocity $v$ can be related to the orbital period $T$ by:
-
+![alt text](image.png)
 $$
 v = \frac{2 \pi r}{T}
 $$
