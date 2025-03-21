@@ -23,7 +23,7 @@ The formula for the first cosmic velocity \(v_1\) is:
 $$
 v_1 = \sqrt{\frac{GM}{r}}
 $$
-
+![alt text](image-2.png)
 Where:
 - \(G\) is the gravitational constant \((6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2})\),
 - \(M\) is the mass of the central body (e.g., Earth, Mars, Jupiter),
