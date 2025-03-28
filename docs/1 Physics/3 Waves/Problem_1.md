@@ -63,38 +63,38 @@ The following Python code simulates the interference patterns of waves from poin
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Constants
+# ** Constants**
 A = 1            # Amplitude of the waves
 lambda_wave = 1  # Wavelength (m)
 f = 1            # Frequency (Hz)
 omega = 2 * np.pi * f  # Angular frequency
 k = 2 * np.pi / lambda_wave  # Wave number
 
-# Parameters for the regular polygon
+# **Parameters for the regular polygon**
 n_sides = 5        # Number of sides (vertices) of the polygon (e.g., pentagon)
 radius = 5         # Radius of the polygon (distance from center to vertices)
 theta_offset = 0   # Offset for the initial phase
 
-# Generate the positions of the sources (vertices of the polygon)
+# **Generate the positions of the sources (vertices of the polygon)**
 angles = np.linspace(0, 2 * np.pi, n_sides, endpoint=False)
 sources = np.array([radius * np.cos(angles), radius * np.sin(angles)]).T
 
-# Generate the grid for the water surface
+# **Generate the grid for the water surface**
 x_grid, y_grid = np.meshgrid(np.linspace(-8, 8, 400), np.linspace(-8, 8, 400))
 grid_shape = x_grid.shape
 
-# Calculate the displacement at each point on the grid due to the superposition of waves
+# **Calculate the displacement at each point on the grid due to the superposition of waves**
 def calculate_displacement(x, y, t):
     displacement = np.zeros_like(x)
     for i in range(n_sides):
         source = sources[i]
-        # Calculate distance from the source to each point on the grid
+        **# Calculate distance from the source to each point on the grid**
         r = np.sqrt((x - source[0])**2 + (y - source[1])**2)
         # Calculate the wave contribution from this source
         displacement += A * np.cos(k * r - omega * t + theta_offset)  # Superposition of waves
     return displacement
 
-# Simulate and plot the interference pattern at a specific time
+# **Simulate and plot the interference pattern at a specific time**
 time = 0  # Set the time at which we want to visualize the pattern
 displacement = calculate_displacement(x_grid, y_grid, time)
 
