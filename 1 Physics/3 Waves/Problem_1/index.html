@@ -221,33 +221,33 @@
 <p>```python
 import numpy as np
 import matplotlib.pyplot as plt</p>
-<h1 id="constants">Constants</h1>
+<h1 id="constants">** Constants**</h1>
 <p>A = 1            # Amplitude of the waves
 lambda_wave = 1  # Wavelength (m)
 f = 1            # Frequency (Hz)
 omega = 2 * np.pi * f  # Angular frequency
 k = 2 * np.pi / lambda_wave  # Wave number</p>
-<h1 id="parameters-for-the-regular-polygon">Parameters for the regular polygon</h1>
+<h1 id="parameters-for-the-regular-polygon"><strong>Parameters for the regular polygon</strong></h1>
 <p>n_sides = 5        # Number of sides (vertices) of the polygon (e.g., pentagon)
 radius = 5         # Radius of the polygon (distance from center to vertices)
 theta_offset = 0   # Offset for the initial phase</p>
-<h1 id="generate-the-positions-of-the-sources-vertices-of-the-polygon">Generate the positions of the sources (vertices of the polygon)</h1>
+<h1 id="generate-the-positions-of-the-sources-vertices-of-the-polygon"><strong>Generate the positions of the sources (vertices of the polygon)</strong></h1>
 <p>angles = np.linspace(0, 2 * np.pi, n_sides, endpoint=False)
 sources = np.array([radius * np.cos(angles), radius * np.sin(angles)]).T</p>
-<h1 id="generate-the-grid-for-the-water-surface">Generate the grid for the water surface</h1>
+<h1 id="generate-the-grid-for-the-water-surface"><strong>Generate the grid for the water surface</strong></h1>
 <p>x_grid, y_grid = np.meshgrid(np.linspace(-8, 8, 400), np.linspace(-8, 8, 400))
 grid_shape = x_grid.shape</p>
-<h1 id="calculate-the-displacement-at-each-point-on-the-grid-due-to-the-superposition-of-waves">Calculate the displacement at each point on the grid due to the superposition of waves</h1>
+<h1 id="calculate-the-displacement-at-each-point-on-the-grid-due-to-the-superposition-of-waves"><strong>Calculate the displacement at each point on the grid due to the superposition of waves</strong></h1>
 <p>def calculate_displacement(x, y, t):
     displacement = np.zeros_like(x)
     for i in range(n_sides):
         source = sources[i]
-        # Calculate distance from the source to each point on the grid
+        <strong># Calculate distance from the source to each point on the grid</strong>
         r = np.sqrt((x - source[0])<strong>2 + (y - source[1])</strong>2)
         # Calculate the wave contribution from this source
         displacement += A * np.cos(k * r - omega * t + theta_offset)  # Superposition of waves
     return displacement</p>
-<h1 id="simulate-and-plot-the-interference-pattern-at-a-specific-time">Simulate and plot the interference pattern at a specific time</h1>
+<h1 id="simulate-and-plot-the-interference-pattern-at-a-specific-time"><strong>Simulate and plot the interference pattern at a specific time</strong></h1>
 <p>time = 0  # Set the time at which we want to visualize the pattern
 displacement = calculate_displacement(x_grid, y_grid, time)</p>
 <h1 id="plot-the-interference-pattern">Plot the interference pattern</h1>
