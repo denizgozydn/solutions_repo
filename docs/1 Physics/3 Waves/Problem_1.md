@@ -20,7 +20,9 @@ We will analyze the interference patterns formed on the water surface due to the
 #### 3.1 Wave Equation from a Single Source
 
 A wave emitted from a single point source on the water surface can be described by the following equation:
-
+$$
+\eta(x,y,t) = \frac{A}{\sqrt{r}} \cdot \cos{(kr - \omega t + \phi)}
+$$
 $$
 \text{Displacement at point } (x, y, t) = A \cdot \cos(k \cdot r - \omega t + \phi)
 $$
