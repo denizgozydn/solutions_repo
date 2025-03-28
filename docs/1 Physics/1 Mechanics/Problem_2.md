@@ -218,3 +218,4 @@ plt.title('Poincaré Section')
 
 plt.tight_layout()
 plt.show()
+```
