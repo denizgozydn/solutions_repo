@@ -30,7 +30,7 @@ $$ \mathbf{F} = q (\mathbf{E} + \mathbf{v} \times \mathbf{B}) $$
 We will solve the equations of motion using numerical methods to simulate the particle's trajectory. The motion is governed by:
 
 $$ \frac{d\mathbf{v}}{dt} = \frac{q}{m} (\mathbf{E} + \mathbf{v} \times \mathbf{B}) $$
-
+![alt text][def]
 ### Python Code Implementation:
 
 ```python
@@ -81,3 +81,6 @@ ax.set_title('Particle Trajectory in Uniform Magnetic Field')
 
 plt.show()
 ```
+
+
+[def]: image.png
