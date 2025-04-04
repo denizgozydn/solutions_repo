@@ -218,55 +218,60 @@
 <li>
 <p><strong>Handling Nested Combinations</strong>:</p>
 </li>
-<li>The algorithm should recursively reduce nested combinations of series and parallel resistors. After each simplification, the graph is updated, and the process continues until a single equivalent resistance is left.</li>
+<li>The algorithm should recursively reduce nested combinations of series and parallel resistors. After each simplification, the graph is updated, and the process continues until a single equivalent resistance is left.
+<img alt="alt text" src="../image.png"/>
+<img alt="alt text" src="../image-1.png"/></li>
 </ol>
 <hr/>
 <h2 id="python-implementation">Python Implementation</h2>
 <p>The following Python implementation uses the <code>networkx</code> library to represent the circuit graph. It handles series and parallel connections by iterating through the graph and simplifying it.</p>
-<p>```python
-import networkx as nx</p>
-<p>def equivalent_resistance(graph):
+<pre><code class="language-python">import networkx as nx
+
+def equivalent_resistance(graph):
     """
     Function to calculate the equivalent resistance of a given circuit graph.
     :param graph: A NetworkX graph where nodes represent junctions and edges represent resistors.
     :return: The equivalent resistance of the network.
-    """</p>
-<pre><code>def series_resistance(resistances):
-    """Calculate the equivalent resistance for resistors in series."""
-    return sum(resistances)
+    """
 
-def parallel_resistance(resistances):
-    """Calculate the equivalent resistance for resistors in parallel."""
-    return 1 / sum(1 / r for r in resistances)
+    def series_resistance(resistances):
+        """Calculate the equivalent resistance for resistors in series."""
+        return sum(resistances)
 
-# Iteratively simplify the circuit graph
-while len(graph.edges) &gt; 1:
-    # Find a series connection
-    for u, v, data in list(graph.edges(data=True)):
-        resistance = data.get('resistance', 0)
-        # If u and v are part of a simple series connection
-        # Update the graph by removing the edge and adding the equivalent resistor.
-        graph.remove_edge(u, v)
-        # This is a simplification step: replacing series resistors with their equivalent resistance
-        # Here we will add a new resistor between the nodes u and v with the calculated resistance
+    def parallel_resistance(resistances):
+        """Calculate the equivalent resistance for resistors in parallel."""
+        return 1 / sum(1 / r for r in resistances)
 
-    # Find parallel connections
-    for u, v, data in list(graph.edges(data=True)):
-        resistance = data.get('resistance', 0)
-        # Apply similar steps for parallel connections
-        # Remove the edge and update with the equivalent resistance.
+    # Iteratively simplify the circuit graph
+    while len(graph.edges) &gt; 1:
+        # Find a series connection
+        for u, v, data in list(graph.edges(data=True)):
+            resistance = data.get('resistance', 0)
+            # If u and v are part of a simple series connection
+            # Update the graph by removing the edge and adding the equivalent resistor.
+            graph.remove_edge(u, v)
+            # This is a simplification step: replacing series resistors with their equivalent resistance
+            # Here we will add a new resistor between the nodes u and v with the calculated resistance
 
-# Return the final equivalent resistance after simplification
-return graph.nodes[0].get('resistance', 0)  # Placeholder for actual resistance calculation
-</code></pre>
-<h1 id="example-graph-construction">Example Graph Construction</h1>
-<h1 id="resistors-as-edges-create-a-graph-where-each-edge-has-a-resistance-attribute">Resistors as edges: Create a graph where each edge has a 'resistance' attribute</h1>
-<p>G = nx.Graph()
+        # Find parallel connections
+        for u, v, data in list(graph.edges(data=True)):
+            resistance = data.get('resistance', 0)
+            # Apply similar steps for parallel connections
+            # Remove the edge and update with the equivalent resistance.
+
+    # Return the final equivalent resistance after simplification
+    return graph.nodes[0].get('resistance', 0)  # Placeholder for actual resistance calculation
+
+# Example Graph Construction
+# Resistors as edges: Create a graph where each edge has a 'resistance' attribute
+G = nx.Graph()
 G.add_edge(1, 2, resistance=5)
 G.add_edge(2, 3, resistance=10)
-G.add_edge(3, 4, resistance=15)</p>
-<h1 id="calculate-the-equivalent-resistance">Calculate the equivalent resistance</h1>
-<p>print("Equivalent Resistance: ", equivalent_resistance(G))</p>
+G.add_edge(3, 4, resistance=15)
+
+# Calculate the equivalent resistance
+print("Equivalent Resistance: ", equivalent_resistance(G))
+</code></pre>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
