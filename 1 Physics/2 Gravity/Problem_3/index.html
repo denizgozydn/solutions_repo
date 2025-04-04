@@ -228,42 +228,50 @@ v_e = \sqrt{\frac{2GM}{r}}
 <h2 id="numerical-simulation">Numerical Simulation</h2>
 <p>We will perform a numerical integration of the equations of motion to simulate the trajectory of a payload based on initial conditions. For this, we will use the <code>scipy.integrate.solve_ivp</code> function, which allows us to numerically solve the system of differential equations for the position and velocity of the payload.</p>
 <h3 id="python-code">Python Code</h3>
-<p>```python
-import numpy as np
+<pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
-from scipy.integrate import solve_ivp</p>
-<h1 id="constants">Constants</h1>
-<p>G = 6.67430e-11  # Gravitational constant in m^3 kg^-1 s^-2
+from scipy.integrate import solve_ivp
+
+# Constants
+G = 6.67430e-11  # Gravitational constant in m^3 kg^-1 s^-2
 M = 5.972e24     # Mass of Earth in kg
-R = 6371e3       # Radius of Earth in meters</p>
-<h1 id="initial-conditions">Initial conditions</h1>
-<h1 id="initial-position-in-meters-and-velocity-in-ms">Initial position (in meters) and velocity (in m/s)</h1>
-<p>r0 = R + 100e3  # 100 km above the Earth's surface
-v0 = 7.12e3    # Initial velocity (in m/s) near the orbital velocity for low Earth orbit</p>
-<h1 id="initial-angle-and-velocity-in-x-and-y-directions">Initial angle and velocity in x and y directions</h1>
-<p>theta0 = 0  # initial angle
+R = 6371e3       # Radius of Earth in meters
+
+# Initial conditions
+# Initial position (in meters) and velocity (in m/s)
+r0 = R + 100e3  # 100 km above the Earth's surface
+v0 = 7.12e3    # Initial velocity (in m/s) near the orbital velocity for low Earth orbit
+
+# Initial angle and velocity in x and y directions
+theta0 = 0  # initial angle
 vx0 = 0      # initial velocity in x direction (in m/s)
-vy0 = v0     # initial velocity in y direction (in m/s)</p>
-<h1 id="system-of-equations">System of equations</h1>
-<p>def equations(t, y):
+vy0 = v0     # initial velocity in y direction (in m/s)
+
+# System of equations
+def equations(t, y):
     x, y, vx, vy = y
-    r = np.sqrt(x<strong>2 + y</strong>2)  # distance from the center of the Earth
+    r = np.sqrt(x**2 + y**2)  # distance from the center of the Earth
     # Gravitational acceleration
-    ax = -G * M * x / r<strong>3
-    ay = -G * M * y / r</strong>3
-    return [vx, vy, ax, ay]</p>
-<h1 id="initial-conditions-for-the-ode-solver-position-and-velocity">Initial conditions for the ODE solver (position and velocity)</h1>
-<p>initial_conditions = [r0, 0, vx0, vy0]  # Initial position and velocity in x and y</p>
-<h1 id="time-span-for-the-simulation-from-0-to-5000-seconds">Time span for the simulation (from 0 to 5000 seconds)</h1>
-<p>t_span = (0, 5000)
-t_eval = np.linspace(0, 5000, 500)</p>
-<h1 id="solve-the-system-of-odes">Solve the system of ODEs</h1>
-<p>solution = solve_ivp(equations, t_span, initial_conditions, t_eval=t_eval)</p>
-<h1 id="extract-the-trajectory">Extract the trajectory</h1>
-<p>x_trajectory = solution.y[0]
-y_trajectory = solution.y[1]</p>
-<h1 id="plotting-the-trajectory">Plotting the trajectory</h1>
-<p>plt.figure(figsize=(8, 8))
+    ax = -G * M * x / r**3
+    ay = -G * M * y / r**3
+    return [vx, vy, ax, ay]
+
+# Initial conditions for the ODE solver (position and velocity)
+initial_conditions = [r0, 0, vx0, vy0]  # Initial position and velocity in x and y
+
+# Time span for the simulation (from 0 to 5000 seconds)
+t_span = (0, 5000)
+t_eval = np.linspace(0, 5000, 500)
+
+# Solve the system of ODEs
+solution = solve_ivp(equations, t_span, initial_conditions, t_eval=t_eval)
+
+# Extract the trajectory
+x_trajectory = solution.y[0]
+y_trajectory = solution.y[1]
+
+# Plotting the trajectory
+plt.figure(figsize=(8, 8))
 plt.plot(x_trajectory, y_trajectory, label="Trajectory of Payload")
 plt.scatter(0, 0, color="red", label="Earth", s=100)  # Earth at the origin
 plt.title("Trajectory of a Freely Released Payload Near Earth")
@@ -275,7 +283,7 @@ plt.grid(True)
 plt.legend()
 plt.axis("equal")
 plt.show()
-.</p>
+</code></pre>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
