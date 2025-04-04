@@ -136,4 +136,4 @@ plt.xticks(rotation=90)
 plt.grid(True)
 plt.tight_layout()
 plt.show()
-.
+```
