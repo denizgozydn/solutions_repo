@@ -41,7 +41,8 @@ Using graph theory to analyze electrical circuits offers several advantages:
 
 4. **Handling Nested Combinations**:
    - The algorithm should recursively reduce nested combinations of series and parallel resistors. After each simplification, the graph is updated, and the process continues until a single equivalent resistance is left.
-
+![alt text](image.png)
+![alt text](image-1.png)
 ---
 
 ## Python Implementation
@@ -95,4 +96,4 @@ G.add_edge(3, 4, resistance=15)
 
 # Calculate the equivalent resistance
 print("Equivalent Resistance: ", equivalent_resistance(G))
-
+```
