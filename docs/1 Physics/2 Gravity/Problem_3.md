@@ -129,4 +129,4 @@ plt.grid(True)
 plt.legend()
 plt.axis("equal")
 plt.show()
-.
+```
