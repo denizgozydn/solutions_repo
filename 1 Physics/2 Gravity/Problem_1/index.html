@@ -247,29 +247,33 @@ T^2 \propto r^3
 <h2 id="python-implementation">Python Implementation</h2>
 <p>We can simulate circular orbits using Kepler’s Third Law and visualize the relationship between orbital period and orbital radius.</p>
 <h3 id="code-for-orbital-simulation">Code for Orbital Simulation</h3>
-<p>```python
-import numpy as np
-import matplotlib.pyplot as plt</p>
-<h1 id="constants">Constants</h1>
-<p>G = 6.67430e-11  # Gravitational constant in m^3 kg^-1 s^-2
-M = 5.972e24     # Mass of Earth in kg</p>
-<h1 id="function-to-calculate-orbital-period-using-keplers-third-law">Function to calculate orbital period using Kepler's Third Law</h1>
-<p>def orbital_period(radius):
-    return 2 * np.pi * np.sqrt(radius**3 / (G * M))</p>
-<h1 id="generate-orbital-radii-from-1000-km-to-1-million-km">Generate orbital radii from 1000 km to 1 million km</h1>
-<p>radii = np.linspace(1000e3, 1e7, 100)</p>
-<h1 id="calculate-orbital-periods">Calculate orbital periods</h1>
-<p>periods = orbital_period(radii)</p>
-<h1 id="plotting-the-relationship-between-orbital-period-and-radius">Plotting the relationship between orbital period and radius</h1>
-<p>plt.figure(figsize=(8, 6))
-plt.plot(radii, periods, label=r'<span class="arithmatex">\(T^2 \propto r^3\)</span>', color='b')
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+G = 6.67430e-11  # Gravitational constant in m^3 kg^-1 s^-2
+M = 5.972e24     # Mass of Earth in kg
+
+# Function to calculate orbital period using Kepler's Third Law
+def orbital_period(radius):
+    return 2 * np.pi * np.sqrt(radius**3 / (G * M))
+
+# Generate orbital radii from 1000 km to 1 million km
+radii = np.linspace(1000e3, 1e7, 100)
+
+# Calculate orbital periods
+periods = orbital_period(radii)
+
+# Plotting the relationship between orbital period and radius
+plt.figure(figsize=(8, 6))
+plt.plot(radii, periods, label=r'$T^2 \propto r^3$', color='b')
 plt.title('Orbital Period vs Orbital Radius')
 plt.xlabel('Orbital Radius (m)')
 plt.ylabel('Orbital Period (s)')
 plt.grid(True)
 plt.legend()
 plt.show()
-.</p>
+</code></pre>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
