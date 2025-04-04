@@ -25,10 +25,10 @@ F_{\text{gravity}} = \frac{GMm}{r^2}
 $$
 
 Where:
-- \( G \) is the gravitational constant \((6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2})\),
-- \( M \) is the mass of the Earth \((5.972 \times 10^{24} \, \text{kg})\),
-- \( m \) is the mass of the payload,
-- \( r \) is the distance from the center of Earth to the payload.
+- $ G $ is the gravitational constant $(6.67430 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2})$,
+- $ M $ is the mass of the Earth $(5.972 \times 10^{24} \, \text{kg})$,
+- $ m $ is the mass of the payload,
+- $ r $ is the distance from the center of Earth to the payload.
 
 From Newton's second law, we can compute the acceleration of the payload:
 
@@ -42,7 +42,7 @@ $$
 \frac{d^2r}{dt^2} = - \frac{GM}{r^2}
 $$
 
-Where \( r \) is the distance from the center of Earth.
+Where $ r $ is the distance from the center of Earth.
 
 The trajectory of the payload depends on its initial conditions (position and velocity) and the gravitational force acting on it. For simplicity, we will simulate the motion of the payload in a 2D plane assuming radial symmetry.
 
@@ -55,11 +55,11 @@ r(\theta) = \frac{a(1 - e^2)}{1 + e \cos(\theta)}
 $$
 
 Where:
-- \( a \) is the semi-major axis of the ellipse,
-- \( e \) is the eccentricity of the orbit,
-- \( \theta \) is the true anomaly.
+- $ a $ is the semi-major axis of the ellipse,
+- $ e $ is the eccentricity of the orbit,
+- $ \theta $ is the true anomaly.
 
-2. **Parabolic Trajectories**: When the initial velocity of the payload is exactly the escape velocity at a given distance, it follows a parabolic trajectory. The escape velocity \( v_e \) at distance \( r \) is:
+2. **Parabolic Trajectories**: When the initial velocity of the payload is exactly the escape velocity at a given distance, it follows a parabolic trajectory. The escape velocity $ v_e $ at distance $ r $ is:
 
 $$
 v_e = \sqrt{\frac{2GM}{r}}
