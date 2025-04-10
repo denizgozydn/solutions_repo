@@ -84,10 +84,6 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#python-implementation">Python Implementation</a>
-</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -177,10 +173,10 @@
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
 <p># Exploring the Central Limit Theorem through Simulations</p>
-<h2 id="motivation">Motivation</h2>
+<p>Motivation</p>
 <p>The <strong>Central Limit Theorem (CLT)</strong> is a cornerstone of probability and statistics, stating that the <strong>sampling distribution of the sample mean</strong> approaches a normal distribution as the sample size increases, regardless of the population’s original distribution. Simulations provide an intuitive and hands-on way to observe this phenomenon in action.</p>
 <hr/>
-<p>Task Overview</p>
+<p># Task Overview</p>
 <ol>
 <li>Simulating Sampling Distributions:
 We will generate populations from different distributions:</li>
@@ -190,7 +186,7 @@ We will generate populations from different distributions:</li>
 <p><strong>Binomial distribution</strong>.</p>
 </li>
 <li>
-<p>Sampling and Visualization:</p>
+<h1 id="sampling-and-visualization">Sampling and Visualization:</h1>
 </li>
 <li>Take random samples of different sizes (5, 10, 30, 50).</li>
 <li>Calculate the sample mean for each sample.</li>
@@ -199,15 +195,15 @@ We will generate populations from different distributions:</li>
 <p>Plot histograms of the sample means for each sample size.</p>
 </li>
 <li>
-<p>Parameter Exploration:</p>
+<h1 id="parameter-exploration">Parameter Exploration:</h1>
 </li>
 <li>Investigate how the shape of the original distribution and the sample size affect the rate of convergence to normality.</li>
 <li>
 <p>Highlight the impact of the population’s variance on the spread of the sampling distribution.</p>
 </li>
 <li>
-<p>Practical Applications:
-The <strong>Central Limit Theorem</strong> has numerous real-world applications:</p>
+<h1 id="practical-applications">Practical Applications:</h1>
+<p>The <strong>Central Limit Theorem</strong> has numerous real-world applications:</p>
 </li>
 <li><strong>Estimating population parameters</strong>.</li>
 <li><strong>Quality control in manufacturing</strong>.</li>
@@ -225,7 +221,7 @@ The <strong>Central Limit Theorem</strong> has numerous real-world applications:
 - <span class="arithmatex">\(n\)</span> is the sample size.</p>
 <p>This means as the sample size <span class="arithmatex">\(n\)</span> increases, the sampling distribution of the sample mean will approach a normal distribution with mean <span class="arithmatex">\(\mu\)</span> and standard deviation <span class="arithmatex">\(\frac{\sigma}{\sqrt{n}}\)</span>.</p>
 <p><img alt="s" src="../image.png"/>---</p>
-<h2 id="python-implementation">Python Implementation</h2>
+<p># Python Implementation</p>
 <p>Now, let's implement the simulation and visualize the Central Limit Theorem in action.</p>
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
