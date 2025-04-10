@@ -7,6 +7,7 @@ Monte Carlo simulations are a powerful class of computational techniques that us
 
 This problem connects fundamental concepts of probability, geometry, and numerical computation. It also provides a gateway to understanding how randomness can be harnessed to solve complex problems in physics, finance, and computer science. The Monte Carlo approach to π estimation highlights the versatility and simplicity of this method while offering practical insights into convergence rates and computational efficiency.
 
+![alt text](image-3.png)
 ---
 
 ## Task
@@ -72,7 +73,7 @@ $$
 #### 3. Visualization:
 
 We will create a graphical representation of the simulation, showing the needle positions relative to the lines.
-
+s
 ![alt text](image-2.png)
 ---
 
