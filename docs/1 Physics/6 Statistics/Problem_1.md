@@ -7,7 +7,7 @@ The **Central Limit Theorem (CLT)** is a cornerstone of probability and statisti
 
 ---
 
- # Task Overview
+ ## Task Overview
 
  1. Simulating Sampling Distributions:
 We will generate populations from different distributions:
@@ -51,7 +51,7 @@ This means as the sample size $n$ increases, the sampling distribution of the sa
 
 ![s](image.png)---
 
- # Python Implementation
+ ## Python Implementation
 
 Now, let's implement the simulation and visualize the Central Limit Theorem in action.
 
