@@ -234,12 +234,9 @@ This is the range as a function of the angle of projection. Different initial co
 - <em>Uneven Terrain</em>: Adjust the landing height in the vertical equation, solving for $ t $ when $ y(t) = h $. This complicates the range formula.
 - <em>Air Resistance</em>: Introduce a drag force proportional to velocity (e.g., $ F_d = -k v $), turning the equations into nonlinear differential equations, typically solved numerically.
 - <em>Real-World Examples</em>: Artillery, sports (e.g., golf, soccer), or space launches (with modified $ g $).</p>
-<hr/>
-<p>.
-import numpy as np
+<p>import numpy as np
 import matplotlib.pyplot as plt</p>
 <h1 id="constants">Constants</h1>
-<p>g = 9.81  # gravitational acceleration (m/s^2)</p>
 <h1 id="function-to-calculate-range">Function to calculate range</h1>
 <p>def calculate_range(v0, theta_deg):
     theta_rad = np.radians(theta_deg)  # Convert degrees to radians
