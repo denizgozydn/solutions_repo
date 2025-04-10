@@ -48,7 +48,8 @@ Where:
 
 This means as the sample size $n$ increases, the sampling distribution of the sample mean will approach a normal distribution with mean $\mu$ and standard deviation $\frac{\sigma}{\sqrt{n}}$.
 
----
+
+![s](image.png)---
 
 ## Python Implementation
 
