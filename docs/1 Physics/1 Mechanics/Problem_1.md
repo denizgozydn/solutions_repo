@@ -72,14 +72,13 @@ This model assumes a flat surface and no air resistance, but it can be adapted:
 - *Air Resistance*: Introduce a drag force proportional to velocity (e.g., $ F_d = -k v $), turning the equations into nonlinear differential equations, typically solved numerically.
 - *Real-World Examples*: Artillery, sports (e.g., golf, soccer), or space launches (with modified $ g $).
 
----
-.
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 
 # Constants
 
-g = 9.81  # gravitational acceleration (m/s^2)
 
 # Function to calculate range
 def calculate_range(v0, theta_deg):
