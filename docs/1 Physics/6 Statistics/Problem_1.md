@@ -1,7 +1,7 @@
 # Problem 1
  # Exploring the Central Limit Theorem through Simulations
 
-  Motivation
+  # Motivation
 
 The **Central Limit Theorem (CLT)** is a cornerstone of probability and statistics, stating that the **sampling distribution of the sample mean** approaches a normal distribution as the sample size increases, regardless of the population’s original distribution. Simulations provide an intuitive and hands-on way to observe this phenomenon in action.
 
@@ -15,17 +15,17 @@ We will generate populations from different distributions:
 - **Exponential distribution**.
 - **Binomial distribution**.
 
- 2. #  Sampling and Visualization:
+ 2.  Sampling and Visualization:
 - Take random samples of different sizes (5, 10, 30, 50).
 - Calculate the sample mean for each sample.
 - Repeat the process multiple times to create a sampling distribution of the sample mean.
 - Plot histograms of the sample means for each sample size.
 
-3. # Parameter Exploration:
+3. Parameter Exploration:
 - Investigate how the shape of the original distribution and the sample size affect the rate of convergence to normality.
 - Highlight the impact of the population’s variance on the spread of the sampling distribution.
 
-4. # Practical Applications:
+4.  Practical Applications:
 The **Central Limit Theorem** has numerous real-world applications:
 - **Estimating population parameters**.
 - **Quality control in manufacturing**.
