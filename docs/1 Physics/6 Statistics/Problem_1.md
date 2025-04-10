@@ -7,25 +7,25 @@ The **Central Limit Theorem (CLT)** is a cornerstone of probability and statisti
 
 ---
 
-## Task Overview
+ Task Overview
 
-### 1. Simulating Sampling Distributions:
+ 1. Simulating Sampling Distributions:
 We will generate populations from different distributions:
 - **Uniform distribution**.
 - **Exponential distribution**.
 - **Binomial distribution**.
 
-### 2. Sampling and Visualization:
+ 2. Sampling and Visualization:
 - Take random samples of different sizes (5, 10, 30, 50).
 - Calculate the sample mean for each sample.
 - Repeat the process multiple times to create a sampling distribution of the sample mean.
 - Plot histograms of the sample means for each sample size.
 
-### 3. Parameter Exploration:
+3. Parameter Exploration:
 - Investigate how the shape of the original distribution and the sample size affect the rate of convergence to normality.
 - Highlight the impact of the population’s variance on the spread of the sampling distribution.
 
-### 4. Practical Applications:
+4. Practical Applications:
 The **Central Limit Theorem** has numerous real-world applications:
 - **Estimating population parameters**.
 - **Quality control in manufacturing**.
@@ -33,7 +33,7 @@ The **Central Limit Theorem** has numerous real-world applications:
 
 ---
 
-## Central Limit Theorem Formula
+ Central Limit Theorem Formula
 
 The Central Limit Theorem states that if $X_1, X_2, ..., X_n$ are i.i.d. random variables with mean $\mu$ and variance $\sigma^2$, then the sample mean $\bar{X}$ satisfies the following distribution:
 
