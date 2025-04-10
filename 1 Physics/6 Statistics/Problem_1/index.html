@@ -86,20 +86,6 @@
 <ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#task-overview">Task Overview</a>
-<ul>
-<li class="toctree-l4"><a class="reference internal" href="#1-simulating-sampling-distributions">1. Simulating Sampling Distributions:</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#2-sampling-and-visualization">2. Sampling and Visualization:</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#3-parameter-exploration">3. Parameter Exploration:</a>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#4-practical-applications">4. Practical Applications:</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#central-limit-theorem-formula">Central Limit Theorem Formula</a>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="#python-implementation">Python Implementation</a>
 </li>
 </ul>
@@ -194,31 +180,41 @@
 <h2 id="motivation">Motivation</h2>
 <p>The <strong>Central Limit Theorem (CLT)</strong> is a cornerstone of probability and statistics, stating that the <strong>sampling distribution of the sample mean</strong> approaches a normal distribution as the sample size increases, regardless of the population’s original distribution. Simulations provide an intuitive and hands-on way to observe this phenomenon in action.</p>
 <hr/>
-<h2 id="task-overview">Task Overview</h2>
-<h3 id="1-simulating-sampling-distributions">1. Simulating Sampling Distributions:</h3>
-<p>We will generate populations from different distributions:
-- <strong>Uniform distribution</strong>.
-- <strong>Exponential distribution</strong>.
-- <strong>Binomial distribution</strong>.</p>
-<h3 id="2-sampling-and-visualization">2. Sampling and Visualization:</h3>
-<ul>
+<p>Task Overview</p>
+<ol>
+<li>Simulating Sampling Distributions:
+We will generate populations from different distributions:</li>
+<li><strong>Uniform distribution</strong>.</li>
+<li><strong>Exponential distribution</strong>.</li>
+<li>
+<p><strong>Binomial distribution</strong>.</p>
+</li>
+<li>
+<p>Sampling and Visualization:</p>
+</li>
 <li>Take random samples of different sizes (5, 10, 30, 50).</li>
 <li>Calculate the sample mean for each sample.</li>
 <li>Repeat the process multiple times to create a sampling distribution of the sample mean.</li>
-<li>Plot histograms of the sample means for each sample size.</li>
-</ul>
-<h3 id="3-parameter-exploration">3. Parameter Exploration:</h3>
-<ul>
+<li>
+<p>Plot histograms of the sample means for each sample size.</p>
+</li>
+<li>
+<p>Parameter Exploration:</p>
+</li>
 <li>Investigate how the shape of the original distribution and the sample size affect the rate of convergence to normality.</li>
-<li>Highlight the impact of the population’s variance on the spread of the sampling distribution.</li>
-</ul>
-<h3 id="4-practical-applications">4. Practical Applications:</h3>
-<p>The <strong>Central Limit Theorem</strong> has numerous real-world applications:
-- <strong>Estimating population parameters</strong>.
-- <strong>Quality control in manufacturing</strong>.
-- <strong>Predicting outcomes in financial models</strong>.</p>
+<li>
+<p>Highlight the impact of the population’s variance on the spread of the sampling distribution.</p>
+</li>
+<li>
+<p>Practical Applications:
+The <strong>Central Limit Theorem</strong> has numerous real-world applications:</p>
+</li>
+<li><strong>Estimating population parameters</strong>.</li>
+<li><strong>Quality control in manufacturing</strong>.</li>
+<li><strong>Predicting outcomes in financial models</strong>.</li>
+</ol>
 <hr/>
-<h2 id="central-limit-theorem-formula">Central Limit Theorem Formula</h2>
+<p>Central Limit Theorem Formula</p>
 <p>The Central Limit Theorem states that if <span class="arithmatex">\(X_1, X_2, ..., X_n\)</span> are i.i.d. random variables with mean <span class="arithmatex">\(\mu\)</span> and variance <span class="arithmatex">\(\sigma^2\)</span>, then the sample mean <span class="arithmatex">\(\bar{X}\)</span> satisfies the following distribution:</p>
 <div class="arithmatex">\[
 \bar{X} \sim \mathcal{N}\left( \mu, \frac{\sigma^2}{n} \right) \quad \text{as} \quad n \to \infty
